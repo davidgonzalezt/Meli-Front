@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ProductDetails from "./components/ProductDetails";
+import Porducts from "./components/Products";
+import Search from "./components/Search";
+import ProductsContext from "./context/ProductsContext";
 
-function App() {
+const App = () => {
+  const productsContext = useContext(ProductsContext);
+  const { products } = productsContext;
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Route path="/" component={Search} />
+
+      {products.length > 1 ? (
+        <Switch>
+          <Route exact path="/items" component={Porducts} />
+          <Route exact path="/items/:id" component={ProductDetails} />
+        </Switch>
+      ) : (
+        <div className="anything">Busca lo que quieras</div>
+      )}
+    </Router>
   );
-}
+};
 
 export default App;

@@ -1,13 +1,304 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #ededed;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* search */
+.header {
+  background-color: #fff159;
+  border: 0;
+  position: relative;
+  height: 100px;
+}
+
+.nav-header {
+  height: auto;
+  max-width: 50%;
+  margin: auto;
+  position: relative;
+}
+
+.logo {
+  width: 40px;
+  position: relative;
+  top: 34px;
+  margin-right: 10px;
+  right: 50px;
+}
+
+.form {
+  max-width: 600px;
+  padding: 8px 1px;
+  height: 56px;
+  position: relative;
+  margin: auto;
+  right: 20px;
+}
+
+.input-search {
+  width: 100%;
+  padding: 7px 60px 9px 15px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 1px;
+}
+
+.button-search {
+  background-size: cover;
+  display: block;
+  background-image: url("./buscar.png");
+  background-repeat: no-repeat;
+  height: 32px;
+  padding-top: 2px;
+  cursor: pointer;
+  width: 32px;
+  top: 40px;
+  right: -74px;
+  position: absolute;
+  border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  border: 0 rgba(0, 0, 0, 0.2);
+  text-indent: -9999px;
+  opacity: 0.5;
+  outline: none;
+}
+
+.button-search::before {
+  content: "";
+  display: block;
+  height: 32px;
+  border-left: 1px solid #e6e6e6;
+  position: absolute;
+  top: 0px;
+  right: 32px;
+}
+
+.button-search:active{
+  border: none;
+}
+
+.anything {
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+}
+
+/* Products */
+
+.container {
+  background: #ededed;
+  width: 100%;
+  max-width: 800px;
+  left: 91px;
+  position: relative;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: #959595;
+  display: flex;
+
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.card-container {
+  width: 58%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 2px;
+  width: 100%;
+  justify-content: space-between;
+  height: 120px;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.card:last-child {
+  margin-bottom: 20px;
+}
+
+.card::before {
+  content: "";
+  display: block;
+  height: 30px;
+  border-bottom: 1px solid #e6e6e6;
+  position: absolute;
+  top: 6.5px;
+}
+
+.card-img {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-content {
+  display: flex;
+}
+
+.card-body {
+  margin-top: 15px;
+  margin-left: 5px;
+  line-height: 15px;
+}
+
+.content {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.zone {
+  margin: 30px;
+  font-size: 10px;
+  top: -16px;
+  position: relative;
+}
+
+/* detail */
+
+.card-details {
+  background-color: #fff;
+  display: flex;
+  border-radius: 2px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.card-header {
+  justify-content: space-between;
+  display: flex;
+}
+
+.box-img {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.img-details {
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.info {
+  margin: 20px;
+  width: 30%;
+  line-height: 18px;
+}
+
+.info h1 {
+  margin-top: 40px;
+}
+
+.info p:nth-child(1) {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.info p:nth-child(2) {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.buy {
+  width: 100%;
+  border-color: transparent;
+  background-color: #3483fa;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 24px;
+  border-radius: 2px;
+  text-align: center;
+  margin-top: 50px;
+  height: 30px;
+  transition: 0.5s;
+}
+
+.buy:hover {
+  background-color: #8bb9ff;
+  transition: 0.5s;
+}
+
+.description {
+  margin: 20px 155px 10px 35px;
+  font-size: 13px;
+}
+
+.description :first-child {
+  margin-bottom: 10px;
+}
+
+.parrafo {
+  white-space: pre-line;
+  max-width: 600px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 712px) {
+  .card-header {
+    flex-wrap: wrap;
+  }
+  .info {
+    width: 100%;
+  }
+  .img-details {
+    width: 200px;
+    height: 200px;
+  }
+  .description {
+    margin: 20px;
+  }
+  .card-details {
+    align-self: auto;
+  }
+}
+
+@media (max-width: 521px) {
+  .card {
+    flex-wrap: wrap;
+    height: 145px;
+  }
+  .card-container {
+    width: 100%;
+  }
+  .breadcrumb {
+    margin-left: 5px;
+  }
 }
