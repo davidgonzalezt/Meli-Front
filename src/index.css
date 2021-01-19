@@ -116,6 +116,7 @@ a {
   max-width: 800px;
   margin: auto;
   padding: 10px 0;
+  background-color: #ededed;
 }
 
 .card-container {
@@ -285,9 +286,7 @@ a {
   .description {
     margin: 20px;
   }
-  .card-details {
-    align-self: auto;
-  }
+  
 }
 
 @media (max-width: 521px) {
@@ -298,7 +297,7 @@ a {
   .card-container {
     width: 100%;
   }
-  .breadcrumb {
-    margin-left: 5px;
-  }
+  .card-details {
+    width: 90%;
+ }
 }
