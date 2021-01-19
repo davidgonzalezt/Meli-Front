@@ -286,7 +286,9 @@ a {
   .description {
     margin: 20px;
   }
-  
+  .card-details {
+    align-self: auto;
+  }
 }
 
 @media (max-width: 521px) {
@@ -297,7 +299,7 @@ a {
   .card-container {
     width: 100%;
   }
-  .card-details {
-    width: 90%;
- }
+  .breadcrumb {
+    padding-left: 8px;
+  }
 }

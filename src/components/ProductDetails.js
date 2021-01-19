@@ -18,7 +18,7 @@ const ProductDetails = () => {
       {product !== null ? (
         <div className="card-container">
           <div className="card-details">
-            <p className="breadcrumb">  
+            <p className="breadcrumb">
               {product.breadcrumb.length > 0
                 ? product.breadcrumb.map((b) => `${b.name} > `)
                 : "Codo a Codo"}
