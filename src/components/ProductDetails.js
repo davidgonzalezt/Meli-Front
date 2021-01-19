@@ -4,7 +4,7 @@ import ProductsContext from "../context/ProductsContext";
 
 const ProductDetails = () => {
   const productsContext = useContext(ProductsContext);
-  const { product, getSingleProduct } = productsContext;
+  const { product, loading, getSingleProduct } = productsContext;
   const { id } = useParams();
   useEffect(() => {
     if (id) {
@@ -13,12 +13,14 @@ const ProductDetails = () => {
     // eslint-disable-next-line
   }, []);
 
+  if(loading) return <div class="lds-circle"><div></div></div>
+  
   return (
     <>
       {product !== null ? (
         <div className="card-container">
           <div className="card-details">
-            <p className="breadcrumb">
+            <p className="breadcrumb">  
               {product.breadcrumb.length > 0
                 ? product.breadcrumb.map((b) => `${b.name} > `)
                 : "Codo a Codo"}
