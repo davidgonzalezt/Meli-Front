@@ -17,8 +17,12 @@ const ProductDetails = () => {
     <>
       {product !== null ? (
         <div className="card-container">
-          <p className="breadcrumb">Codo a Codo</p>
           <div className="card-details">
+            <p className="breadcrumb">  
+              {product.breadcrumb.length > 0
+                ? product.breadcrumb.map((b) => `${b.name} > `)
+                : "Codo a Codo"}
+            </p>
             <div className="card-header">
               <div className="box-img">
                 <div
@@ -38,9 +42,7 @@ const ProductDetails = () => {
             </div>
             <div className="description">
               <h1>Descripción del Producto</h1>
-              <p className="parrafo">
-                {product.description}
-              </p>
+              <p className="parrafo">{product.description}</p>
             </div>
           </div>
         </div>
