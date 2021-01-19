@@ -7,20 +7,15 @@ import ProductsContext from "./context/ProductsContext";
 
 const App = () => {
   const productsContext = useContext(ProductsContext);
-  const { products } = productsContext;
-  
+  const { products , product } = productsContext;
   return (
     <Router>
       <Route path="/" component={Search} />
-
-      {products.length > 1 ? (
-        <Switch>
+      <Switch>
           <Route exact path="/items" component={Porducts} />
           <Route exact path="/items/:id" component={ProductDetails} />
         </Switch>
-      ) : (
-        <div className="anything">Busca lo que quieras</div>
-      )}
+      {(products.length===0 && !product) && <div className="anything">Busca lo que quieras</div>}
     </Router>
   );
 };
