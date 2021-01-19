@@ -13,7 +13,7 @@ const ProductState = (props) => {
 
   const [state, dispatch] = useReducer(productsReducer, initialState);
 
-  //get products  
+  //get a list of products  
   const getProducts = async (query)=>{
     try {
       const response = await clienteAxios.get(`/api/items?query=${query}`);
@@ -29,6 +29,7 @@ const ProductState = (props) => {
     }
   }
 
+  //get a product
   const getSingleProduct = async (id)=>{
     try {
       const response = await clienteAxios.get(`/api/items/${id}`);
