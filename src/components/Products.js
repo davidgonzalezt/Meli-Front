@@ -4,7 +4,9 @@ import ProductsContext from "../context/ProductsContext";
 
 const Porducts = () => {
   const productsContext = useContext(ProductsContext);
-  const { products, breadproducts } = productsContext;
+  const { products, breadproducts, loading } = productsContext;
+
+  if(loading) return <div class="lds-circle"><div></div></div>
 
   return (
     <>
